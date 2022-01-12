@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function expression1() {
+            sum = 0, base = 1;
+            for (n = 1; n <= 50; n++) {
+                sum += base * n ** 2;
+                base *= (-1);
+            }
+            return sum;
+        }
+        // --------------------------------------------------------------
+        function expression2() {
+            sum = 0;
+            for (n = 1; n <= 50; n++) {
+                if (n % 2) {
+                    sum += n ** 2;
+                }
+                else {
+                    sum -= n ** 2;
+                }
+            }
+            return sum;
+        }
+        // --------------------------------------------------------------
+        function expression3() {
+            sum = 0;
+            for (n = 1; n <= 50; n += 2) {
+                sum += n ** 2;
+            }
+            for (n = 2; n <= 50; n += 2) {
+                sum -= n ** 2;
+            }
+            return sum;
+        }
+        // --------------------------------------------------------------
+        function factor() {
+            num = 36;
+            for (n = 1; n <= num; n++) {
+                if (num % n == 0) {
+                    document.write(n + " ");
+                }
+            }
+            return "";
+        }
+        // --------------------------------------------------------------
+        function perfectNumber() {
+            for (n = 1; n <= 100; n++) {
+                sum = 0;
+                for (m = 1; m < n; m++) {
+                    if (n % m == 0) {
+                        sum += m;   
+                    }
+                }
+                if (n == sum) {
+                    document.write(n + " ");
+                }
+            }
+            return "";
+        }
+        // --------------------------------------------------------------
+        function amstrong1(){
+            for (a=1;a<=9;a++){
+                for (b=0;b<=9;b++){
+                    for (c=0;c<=9;c++){
+                        if (a**3+b**3+c**3==a*100+b*10+c){
+                            document.write(a*100+b*10+c+"<br>");
+                        }
+                    }
+                }
+            }
+            return "";
+        }
+        // --------------------------------------------------------------
+        function amstrong2(){ //水仙花數
+            for (n=1;n<=10000;n++){
+                sum=0;
+                nStr=n.toString();
+                nStrLen=nStr.length;
+                for (m=0;m<nStrLen;m++){
+                    sum+=(nStr.slice(m,m+1))**nStrLen;
+                }
+                if (n==sum){
+                    document.write(n+"<br>");
+                }
+            }
+            return "";
+        }
+        // --------------------------------------------------------------
+        function prime(){
+            num=1000;
+            for (n=1;n<=num;n++){
+                count=0;
+                for (m = 1; m <= n; m++) {
+                    if (n % m == 0) {
+                        count+=1;   
+                    }
+                }
+                if (count==2){
+                    document.write(n+"<br>");
+                } 
+            }
+            return "";
+        }
+        // ---------------------------------------------------
+        function rope(){
+            long=3000, goal=5,count=0;
+            while (long>goal){
+                long/=2;
+                count++;
+            }
+            return count;
+        }
+        // --------------------------------------------------------
+        function rabbit(){
+            num=1;
+            while (1){
+                if (num%3==1 && num%5==3 && num%7==2){
+                    return num;
+                }
+                num++;
+            }
+        }
+        // --------------------------------------------------------------
+        function season(){
+            num=1;
+            if (num<=0 || num>12){
+                return "error";
+            }
+            else{
+                if (num>=3 && num<=5){
+                    return "spring";
+                }
+                else if (num>=6 && num<=8){
+                    return "summer";
+                }
+                else if (num>=9 && num<=11){
+                    return "autumn";
+                }
+                else{
+                    return "winter";
+                }
+            }
+        }
+        // --------------------------------------------------------------
+        function salary(){
+            pay=120,hr=90,total=0;
+            th=[0,60,20]; // 區間差：可再製做function取得
+            bonus=[1,0.25,0.25];
+            for (n=0;n<th.length;n++){
+                hr-=th.slice(n,n+1);
+                total+=pay*bonus.slice(n,n+1)*hr;
+            } 
+            return total;
+        }
+        // --------------------------------------------------------------
+        function leapYear(){
+            year=20100;
+            if (year%400==0){
+                return "leapYear";
+            }
+            else if (year%100==0){
+                return "not leapYear";
+            }
+            else if (year%4==0){
+                return "leapYear";
+            }
+            return "not leapYear";
+        }
+        // --------------------------------------------------------------
+        function refund() {
+            var pay = 1000;
+            var prize = 141;
+            li = [1000, 500, 100, 50, 10, 5, 1], divide = 3;
+            num = ["張", "個"], bill = ["鈔票", "硬幣"];
+            count = 0;
+            if (pay > prize) {
+                diff = pay - prize;
+                while (diff) {
+                    test = parseInt(diff / li[count])
+                    if (test) {
+                        if (count <= divide) { get = 0 }
+                        else { get = 1 }
+                        document.write(test + num[get] + li[count] + bill[get] + "<br>");
+                    }
+                    diff %= li[count];
+                    count ++;
+                }
+                return "Here is your change";
+            }
+            else if (pay == prize) {
+                return "No change";
+            }
+            else {
+                return "Not enough";
+            }
+        }
+        document.write(refund())
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
