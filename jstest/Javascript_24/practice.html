@@ -159,32 +159,32 @@
         // }
 
         //------------------------------------perfectNumber
-        // 3.	迴圏的練習-perfectNumber
-        // 一個數字若等於其所有因數的總和，則此數為perfect number。
-        // 找出100以內所有的完美數。
-        // 說明：6的因數為1, 2, 3，6=1+2+3，故6為完美數。
-        // var key = 0;
-        // for (let i = 1; i < 100; i ++){
-        //     // console.log("i is: " + i)
-        //     for (let j=1; j<i;j++){
-        //         // console.log("j is: " + j);
-        //         if (i%j == 0) {
-        //             // console.log("因數是: " + j);
-        //             key += j;
-        //         }
-        //     }
-        //     // console.log(key);
-        //     // console.log(i);
-        //     if (key == i) console.log("perfect num: " + key);
-        //     key = 0;
-        // }
+        3.	迴圏的練習-perfectNumber
+        一個數字若等於其所有因數的總和，則此數為perfect number。
+        找出100以內所有的完美數。
+        說明：6的因數為1, 2, 3，6=1+2+3，故6為完美數。
+        var key = 0;
+        for (let i = 1; i < 100; i ++){
+            // console.log("i is: " + i)
+            for (let j=1; j<i;j++){
+                // console.log("j is: " + j);
+                if (i%j == 0) {
+                    // console.log("因數是: " + j);
+                    key += j;
+                }
+            }
+            // console.log(key);
+            // console.log(i);
+            if (key == i) console.log("perfect num: " + key);
+            key = 0;
+        }
 
 
         //-------------------------------------amstrong
-        // 4.	迴圏的練習-amstrong
-        // Amstrong數是指一個三位數的整數，其各位數之立方和等於該數本身。
-        // 找出所有的Amstrong數。
-        // 說明：153=13+53+33，故153為Amstrong數。
+        4.	迴圏的練習-amstrong
+        Amstrong數是指一個三位數的整數，其各位數之立方和等於該數本身。
+        找出所有的Amstrong數。
+        說明：153=13+53+33，故153為Amstrong數。
         // for (let i = 100;i < 1000; i++) {
         //     var hun = parseInt(i/100);
         //     var ten = parseInt(i/10%10);
