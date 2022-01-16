@@ -44,10 +44,16 @@
         // txt += document.querySelector("p").innerHTML + "<br><br>";
 
         // txt += document.querySelector("#test1").innerHTML + "<br><br>";
-        const now = new Date();
+        const now = new Date(2020,11,2);
+        console.log(now + "<br>");
+        const now1 = new Date();
+        console.log(now1.getMonth());
+
         const day = now.getDay();
         const days = "日一二三四五六"
         document.write(days[day]);
+
+        
 
         
     </script>

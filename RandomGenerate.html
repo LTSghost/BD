@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+    <script>
+//---------------------------------------------------------------duplicate
+        var arr = [];
+
+        for (let i = 0; i < 4; i++){
+            arr.push(Math.floor(Math.random()*10));
+            console.log(arr.slice(-1));
+        }
+        document.write(arr[0],arr[1],arr[2],arr[3]+"<br>");
+        
+//---------------------------------------------------------------alldiff
+
+        var arr = [];
+
+        arr.push(Math.floor(Math.random()*10));
+        // document.write(arr[0] + "<br>");
+        // console.log(arr.length);
+        for (let j = 1; j < 4; j++){
+            arr.push(Math.floor(Math.random()*10));
+            for (let i = 0; i < j; i++){
+                // console.log(arr);
+                if (arr[i] == arr.slice(-1)){
+                    // console.log(arr);
+                    arr.pop();
+                    j--;
+                    break;
+                }
+            }
+        }
+        document.write(arr[0],arr[1],arr[2],arr[3]+"<br>");
+//---------------------------------------------------------------
+        const arrEN = "abcdefghijklmnopqrstuvwxyz"
+            // document.write(arrEN[Math.floor(Math.random()*26)].toUpperCase());
+        var arr = []
+                var r = Math.floor(Math.random()*2);
+                if (r == 1) arr.push(Math.floor(Math.random()*10));
+                else arr.push(arrEN[Math.floor(Math.random()*26)].toUpperCase());
+            for (let i = 1; i < 4; i++){
+                var r = Math.floor(Math.random()*2);
+                if (arr[i-1]/1 == 0) arr.push(arrEN[Math.floor(Math.random()*26)].toUpperCase());
+                else if (r == 0 && arr[i-1]/1 != 0) arr.push(Math.floor(Math.random()*10));
+                else arr.push(arrEN[Math.floor(Math.random()*26)].toUpperCase());
+            }
+            document.write(arr[0],arr[1],arr[2],arr[3]);
+    </script>
+</body>
+</html>
