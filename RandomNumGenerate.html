@@ -8,11 +8,12 @@
 </head>
 <body>
     <script>
-//---------------------------------------------------------------duplicate
+        const randomNum = () => Math.floor(Math.random()*10);
+//---------------------------------------------------------------reproducible
         var arr = [];
 
         for (let i = 0; i < 4; i++){
-            arr.push(Math.floor(Math.random()*10));
+            arr.push(randomNum());
             console.log(arr.slice(-1));
         }
         document.write(arr[0],arr[1],arr[2],arr[3]+"<br>");
@@ -21,11 +22,11 @@
 
         var arr = [];
 
-        arr.push(Math.floor(Math.random()*10));
+        arr.push(randomNum());
         // document.write(arr[0] + "<br>");
         // console.log(arr.length);
         for (let j = 1; j < 4; j++){
-            arr.push(Math.floor(Math.random()*10));
+            arr.push(randomNum());
             for (let i = 0; i < j; i++){
                 // console.log(arr);
                 if (arr[i] == arr.slice(-1)){
@@ -37,20 +38,34 @@
             }
         }
         document.write(arr[0],arr[1],arr[2],arr[3]+"<br>");
-//---------------------------------------------------------------
-        const arrEN = "abcdefghijklmnopqrstuvwxyz"
+//---------------------------------------------------------------chaos
+
+        const arrEN = "abcdefghijklmnopqrstuvwxyz";
+
+        const randomEN = () => arrEN[Math.floor(Math.random()*26)].toUpperCase();
+
             // document.write(arrEN[Math.floor(Math.random()*26)].toUpperCase());
-        var arr = []
-                var r = Math.floor(Math.random()*2);
-                if (r == 1) arr.push(Math.floor(Math.random()*10));
-                else arr.push(arrEN[Math.floor(Math.random()*26)].toUpperCase());
-            for (let i = 1; i < 4; i++){
-                var r = Math.floor(Math.random()*2);
-                if (arr[i-1]/1 == 0) arr.push(arrEN[Math.floor(Math.random()*26)].toUpperCase());
-                else if (r == 0 && arr[i-1]/1 != 0) arr.push(Math.floor(Math.random()*10));
-                else arr.push(arrEN[Math.floor(Math.random()*26)].toUpperCase());
-            }
-            document.write(arr[0],arr[1],arr[2],arr[3]);
+        var arr = [];
+
+        arr.push(randomNum());
+        arr.push(randomEN());
+
+        for (let i = 0; i<2; i++){
+            var r = Math.floor(Math.random()*2);
+            if (r == 1) arr.push(randomNum());
+            else arr.push(randomEN());
+        }
+        for (let i =0; i< 3; i++){
+            var tmp = arr[i];
+            var cg = Math.floor(Math.random()*4)
+            arr[i] = arr[cg];
+            arr[cg] = tmp;
+        }
+
+        document.write(arr[0],arr[1],arr[2],arr[3]);
+
+
+
     </script>
 </body>
 </html>
