@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbble</title>
+    <link rel="stylesheet" href="style/tabbble.css">
+</head>
+
+<body>
+
+    <article class="article">
+        <div style="text-align: center;">
+            <h1 style="margin-top:30px; margin-bottom: 10px; color: rgb(30, 43, 230);">輸入會員資料</h1>
+        </div>
+        <form action="#" method="get">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label class="t1" for="memberName" >會員名稱</label>
+                        </td>
+                        <td>
+                            <input type="text" id="memberName" name="memberName" autofocus="" placeholder="member" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="gender">性別</label>
+                        </td>
+                        <td>
+                            <label for="gender">
+                                <input type="radio" name="gender" id="gender" value="male" required>男
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female" required>女
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="birth">生日</label>
+                        </td>
+                        <td>
+                            <label>
+                               西 元<input type="text" id="birth" style="width: 50px;" required>年
+                            </label>
+                            <label>
+                            <select name="month" required>
+                                <option value="">請選擇</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                            </select>月
+                            </label>
+                            <label>
+                            <select name="day" id="" required>
+                                <option value="">請選擇</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                            </select>日
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="ID">身份證字號</label>
+                        </td>
+                        <td>
+                            <input type="text" id="ID" placeholder="A123456789" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="phone">電話</label>
+                        </td>
+                        <td>
+                            <input type="text" id="phone" placeholder="0800-061-000" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="address">住址</label>
+                        </td>
+                        <td>
+                            <select name="" id="" style="margin-left: 1px;">
+                                <option value="">選縣市</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">選地區</option>
+                            </select>
+                            <input type="text" style="width:50px;">
+                            <input type="text" style="width: 200px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="email">電子郵件</label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" placeholder="XXX@XXX.com" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="account">帳號</label>
+                        </td>
+                        <td>
+                            <input type="text" id="account" placeholder="account" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="PWD">密碼</label>
+                        </td>
+                        <td>
+                            <input type="password" id="PWD" required>(必須6個字元以上)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="t1" for="rePWD">確認密碼</label>
+                        </td>
+                        <td>
+                            <input type="password" id="rePWD" required>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="commit">
+                <!-- <button>123</button> -->
+                <input class="item" type="submit" value="送出">
+                <input class="item" type="reset" value="取消">
+            </div>
+        </form>
+    </article>
+</body>
+
+</html>
